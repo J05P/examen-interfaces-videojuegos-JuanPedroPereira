@@ -1,10 +1,10 @@
-import { juegos } from "../../public/data/info";
+import { juegos } from "../../public/data/info.js";
 
 export function getJuegoServices(id){
 
-    const pormesa= Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
     setTimeout(() => {
-        const juego=juegos.find(e=> e.id=== id)?.titulo?.pla
+        const juego=juegos.find(e=> e.id=== id)?.titulo
 
         if (juego) {
         resolve(juego);
@@ -12,7 +12,6 @@ export function getJuegoServices(id){
         reject(`juego con id ${id} no existe`);
         }
         }, 800);
-        return pormesa;
         })
 
 }

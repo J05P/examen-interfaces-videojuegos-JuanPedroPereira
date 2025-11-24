@@ -1,4 +1,4 @@
-import { getJuegoServices } from "./services/getJuegoServices";
+import { getJuegoServices } from "./services/getJuegoServices.js";
 const btn = document.getElementById("btn-id");
 const salida = document.getElementById("salida");
 
